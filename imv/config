@@ -1,3 +1,0 @@
-[binds]
-m = exec cp "$imv_current_file" "$HOME/temp/moved"
-d = exec cp "$imv_current_file" "$HOME/temp/trash"
