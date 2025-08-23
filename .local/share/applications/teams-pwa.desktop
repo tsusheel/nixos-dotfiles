@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Microsoft Teams
+Exec=brave --app=https://teams.microsoft.com/v2/ --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions
+Icon=teams
+Type=Application
+StartupWMClass=Brave-browser
+

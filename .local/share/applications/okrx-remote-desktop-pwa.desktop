@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=OkRx Remote Desktop
+Exec=brave --app=https://windows365.microsoft.com/webclient/avd/175cd722-beef-4ad4-a981-4deb56c71b9e/f3d807b0-732c-42d1-d086-08dc5e16b7ad?useOldApp=true --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions
+Icon=OkRx
+Type=Application
+StartupWMClass=Brave-browser
+

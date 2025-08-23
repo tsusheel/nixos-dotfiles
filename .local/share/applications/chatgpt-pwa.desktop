@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=ChatGPT
+Exec=brave --app=https://www.chatgpt.com --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions 
+Icon=chatgpt
+Type=Application
+StartupWMClass=Brave-browser
+

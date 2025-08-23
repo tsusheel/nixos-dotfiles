@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=WhatsApp
+Exec=brave --app=https://web.whatsapp.com --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions 
+Icon=whatsapp
+Type=Application
+StartupWMClass=Brave-browser
+

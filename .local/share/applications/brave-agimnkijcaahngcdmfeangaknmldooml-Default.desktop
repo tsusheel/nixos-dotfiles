@@ -1,0 +1,19 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=YouTube
+Exec=/nix/store/24nm99r68ym6hiarms9n2xrgwvh5fanp-brave-1.80.120/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
+Icon=brave-agimnkijcaahngcdmfeangaknmldooml-Default
+NoDisplay=true
+StartupWMClass=crx_agimnkijcaahngcdmfeangaknmldooml
+Actions=Explore;Subscriptions
+
+[Desktop Action Explore]
+Name=Explore
+Exec=/nix/store/24nm99r68ym6hiarms9n2xrgwvh5fanp-brave-1.80.120/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/explore?feature=app_shortcuts"
+
+[Desktop Action Subscriptions]
+Name=Subscriptions
+Exec=/nix/store/24nm99r68ym6hiarms9n2xrgwvh5fanp-brave-1.80.120/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"

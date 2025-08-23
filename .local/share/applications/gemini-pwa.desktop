@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gemini
+Exec=brave --app=https://gemini.google.com/app --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions 
+Icon=gemini
+Type=Application
+StartupWMClass=Brave-browser
+
