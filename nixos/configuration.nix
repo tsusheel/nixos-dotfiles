@@ -140,6 +140,10 @@
     fd # ineed for nvim config
     webcamoid # ineed for web cam
     obsidian # ineed for note taking
+    nodejs_22 # ineed for development
+    direnv # ineed for flake env setup
+    nix-direnv # ineed for flake env setup
+    inetutils # ineed for telnet
   ];
 
   xdg.portal = {
@@ -183,6 +187,8 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
   services.blueman.enable = true;
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
