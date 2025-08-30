@@ -144,6 +144,8 @@
     direnv # ineed for flake env setup
     nix-direnv # ineed for flake env setup
     inetutils # ineed for telnet
+    postgresql # ineed for psql
+    postman # ineed for postman
   ];
 
   xdg.portal = {
