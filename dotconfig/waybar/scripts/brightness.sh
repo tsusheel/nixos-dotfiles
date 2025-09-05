@@ -1,36 +1,41 @@
 #!/usr/bin/env bash
 
-STATE_FILE="$HOME/.config/waybar/state/gammastep-brightness"
-DEFAULT_BRIGHTNESS=0.8
+STEP=5   # percent step
+MIN=10   # minimum brightness in percent
 
-# Initialize state if not present
-if [ ! -f "$STATE_FILE" ]; then
-    echo "$DEFAULT_BRIGHTNESS" > "$STATE_FILE"
+cur=$(brightnessctl g)
+max=$(brightnessctl m)
+perc=$((cur * 100 / max))
+
+if   [ "$perc" -eq 10 ];  then
+  icon="🌑" # lowest
+elif [ "$perc" -le 25 ]; then
+  icon="🌒"   # low
+elif [ "$perc" -le 50 ]; then
+  icon="🌓"   # medium
+elif [ "$perc" -le 75 ]; then
+  icon="🌔"   # high
+else
+  icon="🌕"   # max
 fi
-
-CURRENT=$(cat "$STATE_FILE")
-STEP=0.1
 
 case "$1" in
   up)
-    NEW=$(awk -v val="$CURRENT" -v step="$STEP" 'BEGIN {n = val + step; if (n > 1) n = 1; print n}')
+    brightnessctl -q set +${STEP}%
     ;;
   down)
-    NEW=$(awk -v val="$CURRENT" -v step="$STEP" 'BEGIN {n = val - step; if (n < 0.1) n = 0.1; print n}')
+    if [ "$perc" -le "$MIN" ]; then
+      brightnessctl -q set ${MIN}%
+    else
+      brightnessctl -q set ${STEP}%-
+    fi
     ;;
-  set)
-    NEW="$2"
+  get)
+    # print current percentage (for Waybar exec)
+    echo "$icon $perc"
     ;;
   *)
-    NEW="$CURRENT"
+    echo "Usage: $0 {up|down|get}"
+    exit 1
     ;;
 esac
-
-# Save new brightness and apply
-echo "$NEW" > "$STATE_FILE"
-gammastep -l 0:0 -t 6500K:6500K -b $NEW:$NEW
-
-# Output percentage for Waybar
-PERCENT=$(awk -v b="$NEW" 'BEGIN { printf("%.0f", b * 100) }')
-echo "{\"text\": \"☀ $PERCENT%\", \"tooltip\": \"Brightness: $PERCENT%\"}"
-

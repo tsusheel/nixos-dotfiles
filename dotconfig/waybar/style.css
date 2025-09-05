@@ -87,6 +87,10 @@ window#waybar {
 #custom-disk {
   margin: 0 6px 0 10px;         /* Optional: add space between other modules */
 }
+
+#custom-brightness {
+  margin: 0 2px 0 12px;     /* spacing around the module */
+}
 /*-----Colors----*/
 /*
  *rgba(0,85,102,1),#005566 --> Indigo(dye)

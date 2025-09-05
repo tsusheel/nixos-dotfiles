@@ -92,7 +92,8 @@
     swww # ineed for wallpapers
     networkmanagerapplet # ineed for wifi
     blueman # ineed for bluetooth
-    gammastep # ineed for adjusting brightness
+    gammastep # ineed for adjusting brightness temp
+    brightnessctl # ineed for adjusting brightness
     pavucontrol # ineed for audio input output
     alsa-utils # ineed for audio input output
     wl-clipboard

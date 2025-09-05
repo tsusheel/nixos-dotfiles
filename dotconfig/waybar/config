@@ -1,7 +1,7 @@
 {
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock", "idle_inhibitor"],
-    "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "temperature", "cpu", "memory", "custom/disk", "battery", "custom/power"],
+    "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "temperature", "cpu", "memory", "custom/disk", "custom/brightness", "battery", "custom/power"],
    
     "hyprland/workspaces": {
          "disable-scroll": true,
@@ -38,11 +38,10 @@
     },
 
     "custom/brightness": {
-        "format": "☀️ {}%",
-        "exec": "~/.config/waybar/scripts/brightness.sh",
-        "on-click": "~/.config/waybar/scripts/brightness.sh up",
-        "on-click-right": "~/.config/waybar/scripts/brightness.sh down",
-	"tooltip": true
+      "exec": "~/.config/waybar/scripts/brightness.sh get",
+      "interval": 5,
+      "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
+      "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down"
     },
 
     "hyprland/submap": {
