@@ -192,6 +192,21 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # auto-cpufreq for power management and power saving
+  services.auto-cpufreq.enable = true;
+
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+  };
+
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
