@@ -14,6 +14,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelModules = [ "i2c-dev" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -69,13 +70,20 @@
   services.gvfs.enable = true;
   services.dbus.enable = true; # ineed for nautilus
 
+  users.groups.i2c = { };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sushi = {
     isNormalUser = true;
     description = "Sushil Thakur";
-    extraGroups = [ "networkmanager" "wheel" "video" "audio" "disk" "storage" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "audio" "disk" "storage" "i2c" ];
     packages = with pkgs; [];
   };
+
+  # Allow ddcutil to run without sudo
+  services.udev.extraRules = ''
+    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -94,6 +102,7 @@
     blueman # ineed for bluetooth
     gammastep # ineed for adjusting brightness temp
     brightnessctl # ineed for adjusting brightness
+    ddcutil # ineed for adjusting monitor brightness
     pavucontrol # ineed for audio input output
     alsa-utils # ineed for audio input output
     wl-clipboard
@@ -147,6 +156,7 @@
     inetutils # ineed for telnet
     postgresql # ineed for psql
     postman # ineed for postman
+    dbeaver-bin # ineed for database client
   ];
 
   xdg.portal = {

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Discord
+Exec=brave --app=https://www.discord.com/channels/@me --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions
+Icon=x
+Type=Application
+StartupWMClass=Brave-browser
+
