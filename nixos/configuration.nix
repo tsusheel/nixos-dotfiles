@@ -158,7 +158,7 @@
     postman # ineed for postman
     dbeaver-bin # ineed for database client
     python3 # ineed for python
-    python313Packages.notebook # ineed for jupyter notebook
+    python313Packages.jupyterlab # ineed for jupyter notebook
     python313Packages.ipykernel # ineed to run python in jupyter notebook
   ];
 
