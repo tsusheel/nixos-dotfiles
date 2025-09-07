@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Prime Video
+Exec=brave --app=https://www.primevideo.com --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions
+Icon=Prime Video
+Type=Application
+StartupWMClass=Brave-browser
+

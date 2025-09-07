@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Netflix
+Exec=brave --app=https://www.netflix.com --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=TranslateUI --no-default-browser-check --disable-background-networking --disable-sync --disable-plugins-discovery --disable-extensions
+Icon=Netflix
+Type=Application
+StartupWMClass=Brave-browser
+
