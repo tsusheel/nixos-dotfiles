@@ -160,6 +160,9 @@
     python3 # ineed for python
     python313Packages.jupyterlab # ineed for jupyter notebook
     python313Packages.ipykernel # ineed to run python in jupyter notebook
+    texliveFull # ineed for LaTeX
+    vscodium # ineed for open source vs code without telemetry (for LaTeX Workshop extension)
+    libreoffice # ineed for office suite
   ];
 
   xdg.portal = {
