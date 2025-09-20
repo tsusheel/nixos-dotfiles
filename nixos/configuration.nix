@@ -163,7 +163,22 @@
     texliveFull # ineed for LaTeX
     vscodium # ineed for open source vs code without telemetry (for LaTeX Workshop extension)
     libreoffice # ineed for office suite
+    dmidecode # ineed to read information about your system's hardware from the BIOS
   ];
+
+  # enable tlp for power management
+  services.tlp = {
+    enable = true;
+    settings = {
+      # Example charging thresholds (if supported by your laptop)
+      START_CHARGE_THRESH_BAT0 = 40;
+      STOP_CHARGE_THRESH_BAT0  = 80;
+
+      # Optional power saving tweaks
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+    };
+  };
 
   xdg.portal = {
     enable = true;
