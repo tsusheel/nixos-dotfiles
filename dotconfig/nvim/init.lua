@@ -141,6 +141,12 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+-- Configure tab spaces count
+vim.opt.tabstop = 2       -- A TAB character looks like 2 spaces
+vim.opt.shiftwidth = 2    -- Indentation level is 2 spaces
+vim.opt.expandtab = true  -- Convert TABs to spaces
+vim.opt.softtabstop = 2   -- Pressing TAB feels like inserting 2 spaces
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
