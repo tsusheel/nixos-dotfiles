@@ -160,10 +160,13 @@
     python3 # ineed for python
     python313Packages.jupyterlab # ineed for jupyter notebook
     python313Packages.ipykernel # ineed to run python in jupyter notebook
+    python313Packages.pip # ineed for python packages
     texliveFull # ineed for LaTeX
     vscodium # ineed for open source vs code without telemetry (for LaTeX Workshop extension)
     libreoffice # ineed for office suite
     dmidecode # ineed to read information about your system's hardware from the BIOS
+    wireguard-tools # ineed for vpn
+    remmina # ineed for rdp
   ];
 
   # enable tlp for power management
